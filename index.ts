@@ -10,8 +10,7 @@ dotenv.config();
 
 const app = express();
 const PORT = 3009;
-const MONGODB_URI =
-  'mongodb+srv://Chibueze:Pass!Word1@nodeexpressprojects.2wvdg.mongodb.net/wedding?retryWrites=true&w=majority&appName=NodeExpressProjects';
+const MONGODB_URI = process?.env?.['MONGO_URI'] || '';
 
 // Middleware
 app.use(helmet()); // Security headers
